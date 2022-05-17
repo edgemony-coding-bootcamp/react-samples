@@ -1,0 +1,17 @@
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+  /* transition: width 1s linear, background 0.3s linear; */
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* .square:hover {
+  background-color: blueviolet;
+  width: 600px;
+} */
+
+.square.selected {
+  background-color: blueviolet;
+  margin-left: 300px;
+}

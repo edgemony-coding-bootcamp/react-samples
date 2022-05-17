@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="anim.css" />
+  </head>
+  <body>
+    <h1>No React here!</h1>
+
+    <h2>CSS Transitions</h2>
+    <div class="square"></div>
+
+    <button>Add item</button>
+    <ul class="list"></ul>
+
+    <hr />
+    <h2>CSS Animations</h2>
+    <div class="square animation-move"></div>
+
+    <script>
+      /**
+       * Selettori e dati
+       */
+      const square = document.querySelector(".square");
+      const list = document.querySelector(".list");
+      const button = document.querySelector("button");
+
+      const data = [
+        "learn React",
+        "use CSS transition",
+        "become web developer",
+      ];
+
+      /**
+       * Alterna una classe CSS su un elemento al click
+       */
+      square.addEventListener("click", () => {
+        square.classList.toggle("selected");
+      });
+
+      /**
+       * Disegno degli elementi dentro una lista e applico un timeout
+       * incrementale su ogni elemento, il timeout a sua volta aggiunge
+       * la classe CSS responsabile dell'effetto animato
+       */
+      const render = () => {
+        const lis = document.querySelectorAll(".list li");
+
+        lis.forEach((element, index) => {
+          setTimeout(() => {
+            element.classList.add("visible");
+          }, 200 * index);
+        });
+      };
+
+      render();
+
+      button.addEventListener("click", () => {
+        data.push("random fact #" + Math.ceil(Math.random() * 100));
+        render();
+      });
+    </script>
+  </body>
+</html>

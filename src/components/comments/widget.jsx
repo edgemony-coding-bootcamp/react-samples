@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SingleComment } from "./singlecomment";
-import { CommentForm } from "./commentform";
+import { CommentForm } from "./form";
 
 const data = [
   {
