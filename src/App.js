@@ -2,6 +2,7 @@ import { CommentsWidget } from "./components/comments/widget";
 import { WeatherWidget } from "./components/weather/widget";
 import { Ecommerce } from "./components/ecommerce";
 import { Login } from "./components/login";
+import { Tailwind } from "./components/tailwind";
 import { Square } from "./components/animations/square";
 
 import "./App.css";
@@ -15,6 +16,8 @@ function App() {
       <h1>Collection of React samples by Edgemony!</h1>
       <hr />
       <Login />
+      <hr />
+      <Tailwind />
       <hr />
       <CommentsWidget />
       <hr />
