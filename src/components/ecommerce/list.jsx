@@ -22,7 +22,13 @@ const mock = [
   },
 ];
 
-export const List = ({ category, search }) => {
+export const List = ({
+  category,
+  search,
+  addToCart,
+  removeFromCart,
+  cartIDs,
+}) => {
   const [source, setSource] = useState([]);
   const [products, setProducts] = useState(mock);
   const [isLoading, setLoading] = useState(true);
@@ -58,12 +64,24 @@ export const List = ({ category, search }) => {
     // eslint-disable-next-line
   }, [category, search]);
 
+  const getProductId = (id, inCart) => {
+    const item = products.filter((element) => element.id === id);
+    inCart ? removeFromCart(item) : addToCart(item);
+  };
+
   return (
     <section>
-      <ul className="grid">
+      <ul className="grid grid-cols-3 gap-4">
         {products.map((item) => (
           <li key={item.id} className={isLoading ? "loading" : ""}>
-            <Product name={item.title} price={item.price} image={item.image} />
+            <Product
+              id={item.id}
+              name={item.title}
+              price={item.price}
+              image={item.image}
+              getProductId={getProductId}
+              inCart={cartIDs.includes(item.id)}
+            />
           </li>
         ))}
       </ul>
