@@ -23,10 +23,11 @@ tutti gli esempi sono stilati con [TailwindCSS](https://tailwindcss.com/) e [Dai
 - CSS [Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions) & [Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)
 - Unit tests: [Jest docs](https://jestjs.io/) & [CRA docs](https://create-react-app.dev/docs/running-tests)
 - Autenticazione: [OAuth](https://oauth.net/) e [JWT](https://jwt.io/)
+- [Auth flow & backend repo](https://github.com/edgemony-coding-bootcamp/edgemony-course-backend)
 
 ### React component | useState dataflow
 
-![_img/data-flow.svg](_img/data-flow.svg)
+![_img/data-flow.svg](_img/data-flow.png)
 
 ---
 
