@@ -37,9 +37,9 @@ export const Sidebar = (props) => {
   };
 
   return (
-    <aside>
-      <h2>Categories</h2>
-      <ul>
+    <aside className="mr-5">
+      <h2 className="text-xl font-bold">Categories</h2>
+      <ul className="menu bg-base-100 w-56">
         {/* <li>
           <a href="/everything">Everything</a>
         </li> */}

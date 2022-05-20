@@ -7,13 +7,15 @@ const Cities = (props) => {
    */
   const cityChange = (event) => {
     const selected = event.target.value;
-    // console.log(selected);
     props.notify(selected);
   };
 
   return (
     <section>
-      <select onChange={cityChange}>
+      <select
+        onChange={cityChange}
+        className="select select-bordered w-full max-w-xs my-2"
+      >
         {data.map((item, index) => (
           <option key={index} value={item.toLowerCase()}>
             {item}

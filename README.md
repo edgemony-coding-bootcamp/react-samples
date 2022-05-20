@@ -2,6 +2,34 @@
 
 > Alcuni esempi sparsi legati a React.
 
+Demo
+
+### Struttura progetto
+
+- `public/anim-vanilla.html` - esempi CSS transitions in HTML/CSS/JS (no React)
+- `src/lib` - esempio unit test con Jest
+- `src/components` - mini-progetti in React
+  - `/animations` - CSS transitions + React
+  - `/comments` - widget per aggiunta di commenti con star rating
+  - `/ecommerce` - mini SPA che simula la UI di Amazon
+  - `/login` - simulazione dei flussi di login con OAuth
+  - `/tailwind` - utilizzo stil base di TailwindCSS
+  - `/weather` - widget per la visualizzazione dei Meteo
+
+tutti gli esempi sono stilati con [TailwindCSS](https://tailwindcss.com/) e [DaisyUI](https://daisyui.com/).
+
+### Riferimenti
+
+- CSS [Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions) & [Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)
+- Unit tests: [Jest docs](https://jestjs.io/) & [CRA docs](https://create-react-app.dev/docs/running-tests)
+- Autenticazione: [OAuth](https://oauth.net/) e [JWT](https://jwt.io/)
+
+### React component | useState dataflow
+
+![_img/data-flow.svg](_img/data-flow.svg)
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

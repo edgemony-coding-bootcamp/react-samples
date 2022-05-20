@@ -4,7 +4,7 @@ import { Intro } from "./intro";
 import { Cities } from "./cities";
 import { Weather } from "./weather";
 
-const apiKey = "1d00d4c9d5554bbb1fc814776caff71d";
+const apiKey = "---";
 
 export const WeatherWidget = () => {
   const [location, setLocation] = useState("--N/A--");
@@ -13,11 +13,9 @@ export const WeatherWidget = () => {
 
   const update = async (value) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${apiKey}`;
-    console.log(url);
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
 
     setLocation(data.name);
     setTemp(data.main.temp);
@@ -25,7 +23,7 @@ export const WeatherWidget = () => {
   };
 
   return (
-    <section>
+    <section className="my-3">
       <Intro />
       <Cities notify={update} />
       <Weather location={location} temp={temp} status={status} />

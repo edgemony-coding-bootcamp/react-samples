@@ -38,7 +38,7 @@ export const Ecommerce = () => {
   };
 
   return (
-    <section>
+    <section className="my-5">
       <Header searching={searching} cart={cart.length} total={getTotal()} />
       <div className="flex">
         <Sidebar catSelection={catSelection} />

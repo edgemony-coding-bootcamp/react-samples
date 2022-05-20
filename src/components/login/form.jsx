@@ -11,24 +11,31 @@ export const Form = ({ getCredentials }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Email:</label>
-      <input
-        type="email"
-        required
-        placeholder="user@mail.com"
-        autoComplete="off"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        required
-        autoComplete="off"
-        value={pswd}
-        onChange={(event) => setPswd(event.target.value)}
-      />
-      <button>Login</button>
+      <div className="form-control">
+        <label>Email:</label>
+        <input
+          type="email"
+          required
+          placeholder="user@mail.com"
+          autoComplete="off"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          className="input input-bordered w-96 my-1"
+        />
+      </div>
+      <div className="form-control">
+        <label>Password:</label>
+        <input
+          type="password"
+          required
+          autoComplete="off"
+          value={pswd}
+          onChange={(event) => setPswd(event.target.value)}
+          className="input input-bordered w-96 my-1"
+        />
+      </div>
+
+      <button className="btn btn-primary my-1">Login</button>
     </form>
   );
 };

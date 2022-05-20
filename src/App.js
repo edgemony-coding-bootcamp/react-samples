@@ -7,13 +7,13 @@ import { Square } from "./components/animations/square";
 
 import "./App.css";
 import "./styles/square.css";
-import "./styles/weather.css";
-import "./styles/ecommerce.css";
 
 function App() {
   return (
     <main>
-      <h1>Collection of React samples by Edgemony!</h1>
+      <h1 className="text-3xl font-bold my-3">
+        Collection of React samples by Edgemony!
+      </h1>
       <hr />
       <Login />
       <hr />
@@ -21,12 +21,13 @@ function App() {
       <hr />
       <CommentsWidget />
       <hr />
-      <h2>CSS Transitions: moving square</h2>
+      <h2 className="text-2xl font-bold my-2">
+        CSS Transitions: moving square
+      </h2>
       <Square />
       <hr />
       <WeatherWidget />
       <hr />
-      <h2>Fake Ecommerce</h2>
       <Ecommerce />
     </main>
   );

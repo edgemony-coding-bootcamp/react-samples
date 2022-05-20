@@ -36,41 +36,54 @@ export const CommentForm = (props) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h3>Aggiungi un nuovo commento</h3>
-      <input
-        autoComplete="off"
-        required
-        type="text"
-        name="username"
-        placeholder="Username"
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
-      />
-      <input
-        required
-        type="date"
-        name="timestamp"
-        value={formatDate(timestamp)}
-        onChange={changeDate}
-      />
-      <textarea
-        required
-        name="content"
-        onChange={(event) => setContent(event.target.value)}
-        value={content}
-      />
-      <input
-        value={rating}
-        onChange={(event) => setRating(parseInt(event.target.value))}
-        required
-        type="number"
-        name="rating"
-        min="1"
-        max="5"
-        step="1"
-      />
+      <h3 className="font-bold my-1">Aggiungi un nuovo commento</h3>
+      <div className="form-control my-2">
+        <input
+          autoComplete="off"
+          required
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
+          className="input input-bordered w-96"
+        />
+      </div>
+      <div className="form-control my-2">
+        <input
+          required
+          type="date"
+          name="timestamp"
+          value={formatDate(timestamp)}
+          onChange={changeDate}
+          className="input input-bordered w-96"
+        />
+      </div>
+      <div className="form-control my-2">
+        <textarea
+          required
+          name="content"
+          onChange={(event) => setContent(event.target.value)}
+          value={content}
+          className="textarea textarea-bordered w-96 my-1"
+        />
+      </div>
+      <div className="form-control my-2">
+        <input
+          value={rating}
+          onChange={(event) => setRating(parseInt(event.target.value))}
+          required
+          type="number"
+          name="rating"
+          min="1"
+          max="5"
+          step="1"
+          className="input input-bordered w-96 my-1"
+        />
+      </div>
+
       <div>
-        <button>Aggiungi commento</button>
+        <button className="btn btn-primary my-1">Aggiungi commento</button>
       </div>
     </form>
   );

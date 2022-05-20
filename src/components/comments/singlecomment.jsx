@@ -16,7 +16,7 @@ export const SingleComment = (props) => {
 
   return (
     <>
-      <h5>{data.username}</h5>
+      <h5 className="font-bold">{data.username}</h5>
       <span>
         {getDate(data.timestamp)} - {getTime(data.timestamp)}
       </span>

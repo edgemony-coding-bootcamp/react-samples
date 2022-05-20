@@ -25,12 +25,14 @@ export const CommentsWidget = () => {
   };
 
   return (
-    <section>
-      <h2>Commenti</h2>
+    <section className="my-3">
+      <h2 className="text-2xl font-bold my-1">Commenti</h2>
       <ul>
         {comments.map((e, i) => (
-          <li key={i}>
-            <SingleComment data={e} />
+          <li key={i} className="card w-96 bg-base-100 shadow-xl my-3">
+            <div className="card-body">
+              <SingleComment data={e} />
+            </div>
           </li>
         ))}
       </ul>

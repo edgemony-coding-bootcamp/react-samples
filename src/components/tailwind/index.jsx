@@ -12,10 +12,10 @@ export const Tailwind = () => {
   ];
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="my-3">
+      <h1 className="text-2xl font-bold">Hello world!</h1>
       <ul className={grid.join(" ")}>
-        <li className="bg-red-400 p-3">Elemento 1</li>
+        <li>Elemento 1</li>
         <li>Elemento 2</li>
         <li>Elemento 3</li>
         <li>Elemento 4</li>

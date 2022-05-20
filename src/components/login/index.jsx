@@ -41,13 +41,15 @@ export const Login = () => {
   }, [token]);
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="my-3">
+      <h2 className="text-2xl font-bold my-3">Login</h2>
       {token.length === 0 && <Form getCredentials={getCredentials} />}
       {token.length !== 0 && (
         <div>
           <List todos={todos} />
-          <button onClick={() => setToken("")}>Logout</button>
+          <button onClick={() => setToken("")} className="btn btn-error">
+            Logout
+          </button>
         </div>
       )}
     </div>
